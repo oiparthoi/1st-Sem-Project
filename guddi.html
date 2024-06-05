@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<title> Form </title>
+		<script language="Javascript">
+			function onlyAlphabets()
+			{
+				var regex= /^[a-zA-z]*$/;    
+				var user=document.getElementById("uname").value;
+				if(regex.test(document.myform.uname.value))   
+				{
+					document.getElementById("here").innerHTML="Customer's Name:-"+user;
+				}
+				else
+				{
+				alert("Enter Alphabets Not Numbers And Else Numbers And Etc.");
+				return false;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<center>
+		<form class="myform">
+		<div class="container">
+		<fieldset>
+		<table>
+					<legend> oi_parth_oi </legend>
+					<tr>
+						<td> First Name :  </td>
+						<td> <input type="text" id="uname" name="uname"></input> </td>
+					</tr>
+					<tr>
+						<td> Phone Number : </td>
+						<td> <input type="number" id="numb"></input> </td>
+					</tr>
+					<tr>
+						<td> E-Mail Id : </td>
+						<td> <input type="text" id="add"></input> </td>
+					</tr>
+					<td> <input type="button" value="SUBMIT" onclick="onlyAlphabets()"></input> </td>
+		</table>
+		</fieldset>
+		</div>
+		</form>
+		<table>
+		<tr>
+			<td><div id="here"></div></td>
+		</tr>
+		<tr>
+			<td><div id="here1"></div></td>
+		</tr>
+		<tr>
+			<td><div id="here2"></div></td>
+		</tr>
+		</table>
+		</center>
+	</body>
+</html>

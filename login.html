@@ -1,0 +1,275 @@
+<html>
+	<head><title>Regestration</title>
+	<style>
+		.heading{
+		font-family:Rockwell;
+		color:black;
+		font-size:35px;
+		background-color:silver;
+	}
+	body{
+		background-color:white;
+		}
+	td{
+		font-family:papyrus;
+		color:black;
+		font-size:20px;
+		}
+	table{
+		margin-left:17%;
+		background-color:white;
+		}
+	fieldset{
+		background-color:white;
+		}
+	.SHOOT{
+		border:2px  solid white;
+		width:52%;
+		text-align:center;
+		margin-right:12%;
+		}
+	.abc{
+		border:1px solid grey;
+		}
+	.sid{
+			display:inline-block;
+			font-family:Rockwell;
+		}
+		.si{
+			text-decoration:none;
+			padding:5px 20px;
+			border:1px solid white;
+			color:#FFEFD5;
+		}
+		.si:hover{
+			color:black;
+			background-color:#FFEFD5;
+		}
+		.blc{
+			background-color:black;
+			text-align:center;
+		}
+		.ml{
+			color:#FFEFD5;
+			text-align:center;
+			font-family:Rockwell;
+			font-size:15px;
+		}
+		.mli{
+			color:#FFEFD5;
+			text-align:right;
+			font-family:papyrus;
+			font-size:25px;
+		}
+		.cor{
+			width:75px;
+			height:auto;
+			float:left;
+		}
+		.rat{
+			color:black;
+			font-family:mistral;
+			font-size:45px;
+			float:right;
+			margin-top:2px;
+		}
+		.hat{
+			color:black;
+			text-align:center;
+			font-family:papyrus;
+			font-size:55px;
+			padding-top:120px;
+		}
+		input{
+			border-radius:5px;
+			outline:none;
+			padding:2px;
+		}
+		input:focus{
+			border-color:dodgerBlue;
+			box-shadow:0 0 8px 0 dodgerBlue;
+		}
+		.headf{
+			 color:black;
+			 background-color:#FFEFD5;
+			 width:20%;
+			 text-align:center;
+			 font-family:Rockwell;
+			}
+	</style>
+	<script language="Javascript">
+	function myfunction()
+	{
+		onlyAlphabets()
+		onlyNumbers()
+		validateform()
+		aphlsname()
+		onlynum()
+		var cadd=document.getElementById("add").value;
+		document.getElementById("here5").innerHTML="Customer's Address:-"+cadd;
+	}
+		function validateform()
+		{
+		 var x=document.getElementById("email").value;
+		 var atpos=x.indexOf("@");
+		 var dotpos=x.lastIndexOf(".");
+		 if(atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
+		 {
+		  alert("Entered Email Is Not Valid<br>Please Enter Valid E-Mail");
+		  return false;
+		  }
+		  else
+		  {
+			document.getElementById("here4").innerHTML="Customer's E-Mail:-"+x;
+			}
+		}
+		function onlyNumbers()
+		{
+			var regex= /^[0-9]*$/;
+			var number=document.getElementById("numb").value;
+			if(regex.test(document.form.numb.value))
+			{
+			document.getElementById("here3").innerHTML="Customer's Mobile_No.:-"+number;
+			}
+			else
+			{
+			alert("Enter Mobile Number Not Alphabets And Else Text And Etc.");
+			return false;
+			}
+		}
+		function onlyAlphabets()
+		{
+			var regex= /^[a-zA-z]*$/;
+			var user=document.getElementById("uname").value;
+			if(regex.test(document.form.uname.value))
+			{
+				document.getElementById("here").innerHTML="Customer's Name:-"+user;
+			}
+			else
+			{
+			alert("Enter Alphabets Not Numbers And Else Numbers And Etc.");
+			return false;
+			}
+		}
+		function onlynum()
+		{
+			var regex= /^[0-9]*$/;
+			var cage=document.getElementById("age").value;
+			if(regex.test(document.form.age.value))
+			{
+			document.getElementById("here2").innerHTML="Customer's Age:-"+cage;
+			}
+			else
+			{
+			alert("Enter Mobile Number Not Alphabets And Else Text And Etc.");
+			return false;
+			}
+		}
+		function aphlsname()
+		{
+			var regex= /^[a-zA-z]*$/;
+			var sname=document.getElementById("dob").value;
+			if(regex.test(document.form.uname.value))
+			{
+				document.getElementById("here1").innerHTML="Customer's Surname:-"+sname;
+			}
+			else
+			{
+			alert("Enter Alphabets Not Numbers And Else Numbers And Etc.");
+			return false;
+			}
+		}
+	</script>
+	<body>
+		<header>
+			<img src="back2.png" class="cor"></img>
+			<p class="rat">Toyota Supra</p>
+			<p class="hat"> -:Regestration:- </p>
+		</header>
+		<center>
+		<form name="form">
+		<table>
+		<h2 class="headf"> Information </h2>
+		<tr>
+			<td>Customer Name</td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input name="uname" type="text" id="uname" placeholder="Enter The Name"></input></td>
+		</tr>
+		<tr>
+			<td>Customer Surname</td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input name="dob" type="text" id="dob" placeholder="Enter The Surname"></input></td>
+		</tr>
+		<tr>
+			<td>Customer's Age</td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input name="age" type="text" id="age" placeholder="Enter The Age"></input></td>
+		</tr>
+		<tr>
+			<td>Customer's Mobile No.</td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input name="numb" type="text" id="numb" placeholder="Enter The Mobile Number"></input></td>
+		</tr>
+		<tr>
+			<td>Customer's E-mail</td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input name="email" type="text" id="email" placeholder="Enter The E-Mail"></input></td>
+		</tr>
+		<tr>
+			<td>Customer Address</td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input name="address" type="text" id="add" maxlength="35" placeholder="Enter The Address"></input	>
+			<span id="count">35</span>Remaining.
+			</td>
+			<script type="text/javascript">
+				var maxLength=35;
+				$('add').keyup(function()
+				{
+					var txtlength=maxLength-$(this).val().length;
+					$('#count').text(txtlength);
+					});
+			</script>
+		</tr>
+		<tr>
+			<td><input type="radio" name="zender">Japan</td>
+			<td><input type="radio" name="zender">U.S.A.</td>
+			<td><input type="radio" name="zender">Other</td>
+		</tr>
+		</table>
+			<input name="Submit" type="button" value="Submit" onclick="myfunction()">
+		</form>
+		</center>
+		<CENTER>
+		<table class="SHOOT">
+		<DIV>
+		<tr>
+			<td class="abc"><div id="here"></div></td>
+		</tr>
+		<tr>
+			<td class="abc"><div id="here1"></div></td>
+		</tr>
+		<tr>
+			<td class="abc"><div id="here2"></div></td>
+		</tr>
+		<tr>
+			<td class="abc"><div id="here3"></div></td>
+		</tr>
+		<tr>	
+			<td class="abc"><div id="here4"></div></td>
+		</tr>
+		<tr>
+			<td class="abc"><div id="here5"></div></td>
+		</tr>
+		</DIV>
+		</table>
+		</CENTER>
+		<footer class="blc">
+			<br><br><br>
+			<ul class="side">
+				<li class="sid"><a href="NewCard.html" class="si">Home</a></li>
+				<li class="sid"><a href="services.html" class="si">Services</a></li>
+				<li class="sid"><a href="contactus.html" class="si">Contact Us</a></li>
+				<li class="sid"><a href="login.html" class="si">Regestration</a></li>
+			</ul>
+			<p class="ml">parth7cr7@gmail.com</p>
+			<p class="ml">-:99XXXXX124:-</p>
+			<p class="mli">- Parth Patel</p>
+			<br>
+				<a href="#top"><img src="up1.png" style="width:50px;height:50px;"></img></a>
+		</footer>
+	</body>
+</html>
